@@ -1,0 +1,13 @@
+# Site settings
+title: Definitely P&H
+email: tekkahs@gmail.com
+description: "Definitely maybe a terrific coder."
+baseurl: ""
+encoding: "utf-8"
+url: "http://mrraindrop.com"
+github_username:  MrRaindrop
+
+# Build settings
+markdown: kramdown
+# permalink: pretty
+permalink: /:year/:month/:day/:title
