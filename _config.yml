@@ -1,11 +1,11 @@
 # Site settings
-title: Definitely P&H
+title: DEFINITELY P&H
 email: tekkahs@gmail.com
-description: "Definitely maybe a terrific coder."
+description: "A BUG NEVER FIXED, A EXCEPTION NEVER THROWN."
 baseurl: ""
 encoding: "utf-8"
 url: "http://mrraindrop.com"
-github_username:  MrRaindrop
+github_username:  __MrRaindrop__
 
 # Build settings
 markdown: kramdown
