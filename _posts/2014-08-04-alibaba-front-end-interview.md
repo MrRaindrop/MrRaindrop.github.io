@@ -4,6 +4,7 @@ title:  "阿里无线前端校招面试总结"
 date:   2014-08-04 22:30:02
 categories: verbose
 tags: [javascript, js, interview, 前端, 面试, 阿里]
+header-img: "img/home-bg.jpg"
 ---
 
 下午阿里无线事业部面试归来，趁着记忆还热乎，赶紧记录一笔。
