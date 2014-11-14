@@ -4,6 +4,7 @@ title:  "我的一些前端学习经历"
 date:   2014-09-29 11:20:12
 categories: verbose
 tags: [前端, FE, javascript, js, 学习, learning]
+author: "Mr.Raindrop"
 header-img: "img/home-bg.jpg"
 ---
 

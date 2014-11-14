@@ -4,6 +4,7 @@ title:  "Javascript闭包详解"
 date:   2013-04-29 10:09:13
 categories: javascript
 tags: [closure, javascript, js, 闭包]
+author: "Mr.Raindrop"
 header-img: "img/home-bg.jpg"
 ---
 

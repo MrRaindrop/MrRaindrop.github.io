@@ -4,6 +4,7 @@ title:  "编写可维护的Javascript纪要"
 date:   2013-07-13 20:12:51
 categories: javascript
 tags: [javascript, js, 代码规范, 最佳实践, 编程方法]
+author: "Mr.Raindrop"
 header-img: "img/home-bg.jpg"
 ---
 

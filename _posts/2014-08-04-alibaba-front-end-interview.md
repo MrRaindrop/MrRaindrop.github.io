@@ -4,6 +4,7 @@ title:  "阿里无线前端校招面试总结"
 date:   2014-08-04 22:30:02
 categories: verbose
 tags: [javascript, js, interview, 前端, 面试, 阿里]
+author: "Mr.Raindrop"
 header-img: "img/home-bg.jpg"
 ---
 
