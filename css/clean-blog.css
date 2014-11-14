@@ -5,7 +5,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 p a {
   text-decoration: underline;
@@ -31,8 +31,10 @@ a img:focus {
   cursor: zoom-in;
 }
 blockquote {
+  font-size: 14px;
   color: #808080;
   font-style: italic;
+  padding: 1px 0 20px 20px;
 }
 hr.small {
   max-width: 100px;
