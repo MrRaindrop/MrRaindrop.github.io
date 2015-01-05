@@ -21,11 +21,12 @@ h6 {
 }
 a {
   /*color: #404040;*/
-  color: #F57841;
+  color: #F44A0D;
 }
 a:hover,
 a:focus {
   color: #0085a1;
+  text-decoration: none;
 }
 a img:hover,
 a img:focus {
@@ -239,7 +240,7 @@ hr.small {
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
   color: #0085a1;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
