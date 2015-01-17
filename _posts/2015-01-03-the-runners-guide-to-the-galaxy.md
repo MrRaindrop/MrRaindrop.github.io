@@ -16,7 +16,7 @@ header-img: "img/home-bg.jpg"
 
 ``跑步之前先来张图打打气！``
 
-![Fuck this. I'm going running.](http://www.mrraindrop.com/img/posts/ftimgr.jpg)
+![Fuck this. I'm going running.](http://7u2loa.com1.z0.glb.clouddn.com/ftimgr.jpg)
 
 ### 跑步的好处和坏处
 
@@ -65,7 +65,7 @@ header-img: "img/home-bg.jpg"
 
 各大品牌尺码对照表：
 
---> [各品牌尺码对照表](http://www.mrraindrop.com/img/posts/chima.png) <-- (图太大了就不嵌进来了，直接点进去看)
+--> [各品牌尺码对照表](http://7u2loa.com1.z0.glb.clouddn.com/chima.png) <-- (图太大了就不嵌进来了，直接点进去看)
 
 以下是挑选跑鞋的**科学方法**：
 
@@ -75,7 +75,7 @@ header-img: "img/home-bg.jpg"
 
 **脚型与鞋型参考表**（仅供参考）
 
-![脚型与鞋型参考表](http://www.mrraindrop.com/img/posts/feet.jpg)
+![脚型与鞋型参考表](http://7u2loa.com1.z0.glb.clouddn.com/feet.jpg)
 
 **穿衣**
 
@@ -182,7 +182,7 @@ ps: 从网上看的结果是大部分国外的跑步app地图都有偏移，国�
 
 接着上来自顶级马拉松跑者[Ryan Hall](http://en.wikipedia.org/wiki/Ryan_Hall_(runner))的专业指导：
 
-![Ryan Hall](http://www.mrraindrop.com/img/posts/RyanHall.jpg)
+![Ryan Hall](http://7u2loa.com1.z0.glb.clouddn.com/RyanHall.jpg)f
 
 * [跑步动作练习](http://v.youku.com/v_show/id_XMTg2MDUxNzY4.html)
 * [跑步臀部基准](http://v.youku.com/v_show/id_XMTkxMjc2Mzg0.html)
@@ -245,7 +245,7 @@ asics官网有个[My Asics](http://my.asics.com.cn/)可以根据你的性别年�
 
 **2015国内马拉松赛事表**
 
-![Marathon](http://www.mrraindrop.com/img/posts/marathon.jpg)
+![Marathon](http://7u2loa.com1.z0.glb.clouddn.com/marathon.jpg)
 
 > 2014年中国马拉松年会今日在厦门闭幕，为表彰在推动中国马拉松运动发展做出突出贡献的单位，依据中国田径协会马拉松赛事等级评定办法结合专家评议，中国田径协会对32个赛事授予了金银铜牌赛事称号。
 
