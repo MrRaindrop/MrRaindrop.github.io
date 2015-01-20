@@ -3,6 +3,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--categories-->
+                <ul class="list" style="display:none;">
+                {% for category in site.categories %}
+                <li>{{ category | first }}
+                    <span class="category-posts-size">{{ category | last | size }}</span>
+                </li>
+                <!-- <ul class="category-posts-list">
+                    {% for post in category.last %}
+                        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul> -->
+                {% endfor %}
                 <ul class="list-inline text-center">
                     <li>
                         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
