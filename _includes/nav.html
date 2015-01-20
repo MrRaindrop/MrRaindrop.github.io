@@ -16,11 +16,21 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{{ site.baseurl }}/">Home</a>
+                    <a href="{{ site.baseurl }}/">DefinitelyMaybe</a>
                 </li>
+                <li>
+                    <a href="{{ site.baseurl }}/reading_notes">阅读笔记</a>
+                </li>
+                {% for category in site.categories %}
+                <li>
+                    {% if category.first %}<a href="{{ category.first | prepend: site.baseurl }}.html">{{ category.first }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
                 {% for page in site.pages %}
                 <li>
-                    {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+                    {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
