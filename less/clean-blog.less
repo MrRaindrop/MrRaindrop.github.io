@@ -5,7 +5,7 @@
 
 body {
 	.serif;
-	font-size: 20px;
+	font-size: 16px;
 	color: @gray-dark;
 }
 
@@ -14,9 +14,10 @@ body {
 p {
 	line-height: 1.5;
 	margin: 30px 0;
-	a {
+	
+	/*a {
 		text-decoration: underline;
-	}
+	}*/
 }
 
 h1,
@@ -30,10 +31,12 @@ h6 {
 }
 
 a {
-	color: @gray-dark;
+	.basic-link;
+
+	// color: @gray-dark;
 	&:hover,
 	&:focus {
-		color: @brand-primary;
+		// color: @brand-primary;
 	}
 }
 
@@ -189,7 +192,7 @@ hr.small {
 		}
 		@media only screen and (min-width: 768px) {
 			h1 {
-				font-size: 80px;
+				font-size: 55px;
 			}
 		}
 	}
@@ -251,7 +254,7 @@ hr.small {
 	}
 	> .post-meta {
 		color: @gray;
-		font-size: 18px;
+		font-size: 14px;
 		font-style: italic;
 		margin-top: 0;
 		> a {
@@ -267,7 +270,7 @@ hr.small {
 	@media only screen and (min-width: 768px) {
 		> a {
 			> .post-title {
-				font-size: 36px;
+				font-size: 32px;
 			}
 		}
 	}
