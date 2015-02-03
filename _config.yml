@@ -12,5 +12,5 @@ markdown: kramdown
 highlighter: pygments
 # permalink: pretty
 permalink: /:year/:month/:day/:title
-paginate: 5
+paginate: 10
 exclude: ["node_modules"]
