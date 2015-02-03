@@ -14,8 +14,6 @@ header-img: "img/home-bg.jpg"
 
 > 码农改不了的习惯，干事之前先读文档 - -
 
-``跑步之前先来张图打打气！``
-
 ![Fuck this. I'm going running.](http://7u2loa.com1.z0.glb.clouddn.com/ftimgr.jpg)
 
 ### 跑步的好处和坏处
