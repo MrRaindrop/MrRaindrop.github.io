@@ -2,15 +2,16 @@
 title: DEFINITELY MAYBE
 email: tekkahs@gmail.com
 description: "Mr.Raindrop's Tech Memo."
-baseurl: "http://mrraindrop.com"
+baseurl: ""
 encoding: "utf-8"
 url: "http://mrraindrop.com"
 github_username: MrRaindrop
+weibo_username: rurouni
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
 # permalink: pretty
 permalink: /:year/:month/:day/:title
-paginate: 10
+paginate: 8
 exclude: ["node_modules"]
