@@ -22,15 +22,15 @@ header-img: "img/home-bg.jpg"
 
 在本地命令行里运行sass，需要首先安装ruby（这里就不多做介绍了），ruby装好用gem安装sass包：
 
-```bash
+{% highlight php %}
 gem install sass
-```
+{% endhighlight %}
 
 然后就可以使用sass了，比如：
 
-```bash
+{% highlight php %}
 sass foo.scss foo.css
-```
+{% endhighlight %}
 
 上面的命令将``foo.scss``文件编译为``foo.css``样式文件；文件后缀名scss意思是sassy css，强调sass对css代码的完全兼容
 
@@ -38,52 +38,52 @@ sass的编译选项：``nested``（默认值）、``expanded``、``compact``、`
 
 设置编译选项：
 
-```bash
+{% highlight php %}
 sass --style compressed foo.sass foo.css
-```
+{% endhighlight %}
 
 可以自动检测文件或文件夹变动并生成编译后的css
 
 自动检测文件：
 
-```bash
+{% highlight php %}
 sass --watch foo.scss:foo.css
-```
+{% endhighlight %}
 
 自动检测文件夹：
 
-```bash
+{% highlight php %}
 sass --watch app/sass:app/css
-```
+{% endhighlight %}
 
 sass语法和scss语法可以互相转换：
 
-```bash
+{% highlight php %}
 sass-convert style.sass style.scss
-```
+{% endhighlight %}
 
-```bash
+{% highlight php %}
 sass-convert style.scss style.sass
-```
+{% endhighlight %}
 
 ## sass和scss
 
 sass语法写起来更简洁，去掉了大括号和分号，而使用缩进和换行来处理语义间隔；这点类似coffeeScript或者python，看下面的sass的例子：
 
-```sass
+{% highlight css %}
 .some-class
   color: red
   background-color: #fff
-```
+{% endhighlight %}
 
 scss全称是sassy css，写起来跟更接近css，除此之外它和sass没有区别；上面的代码用scss写出来是这样的：
 
-```css
+{% highlight css %}
 .some-class {
   color: red;
   background-color: #fff;
 }
-```
+{% endhighlight %}
 
 可以看出，在没使用sass的扩展特性情况下，scss写法和css没有区别
 
@@ -100,24 +100,24 @@ scss全称是sassy css，写起来跟更接近css，除此之外它和sass没有
 
 变量调用：
 
-```sass
+{% highlight css %}
 div {
   color: $my-color;
 }
-```
+{% endhighlight %}
 
 #### 作为字符串
 
 变量用于字符串，使用#{$var-name}调用，和less的``@{var-name}``类似：
 
-```sass
+{% highlight css %}
 $my-attr: "color";
 
 // 使用变量
 div {
   #{$my-attr}: #fff;
 }
-```
+{% endhighlight %}
 
 注意上面的``#{$my-attr}``会被编译为``color``，但如果是less则会保留``"color"``的双引号，变成``"color": #fff``
 
@@ -125,7 +125,7 @@ div {
 
 变量作用域是和层级相关的，内嵌的变量不能被外层的变量看到；除非为内嵌的变量加上``!global``全局声明，如：
 
-```sass
+{% highlight css %}
 #mine {
   $width: 5em !global;    // 全局变量
   width: $width;
@@ -134,17 +134,17 @@ div {
 #div {
   width: $width;
 }
-```
+{% endhighlight %}
 
 #### 设置默认值
 
 使用``!default``为变量设置默认值，这样如果前面有赋值则不会使用该值，如果没有赋值则使用该值作为变量的值
 
-```sass
+{% highlight css %}
 $content: '1st val';
 $content: '2nd val' !default;
 $new-content: '3rd val' !default;
-```
+{% endhighlight %}
 
 ## 注释
 
@@ -154,20 +154,20 @@ $new-content: '3rd val' !default;
 
 块注释不会被输出到compressed css中，除非块注释的第一个字符是``!``，如：
 
-```sass
+{% highlight css %}
 /*! this is final output */
-```
+{% endhighlight %}
 
 ## 运算
 
 运算和less没有区别
 
-```sass
+{% highlight css %}
 div {
   padding: (5px * 2);
   width: (100px + 400px);
 }
-```
+{% endhighlight %}
 
 ## 父元素和嵌套
 
@@ -182,13 +182,13 @@ div {
 
 &在less和sass中使用上的区别如上表所描述的，less可以将&插入到一个名字中的任何位置：
 
-```less
+{% highlight css %}
 .some-class {
   my-&-free: {
     color: red;
   }
 }
-```
+{% endhighlight %}
 
 上面这样的事情sass是做不到的，sass中&只能作为名字的前缀：``&-some-content``，而不能是``foo-&-bar``
 
@@ -196,17 +196,17 @@ div {
 
 对于font这样的符合属性，可以使用namespace font来实现
 
-```css
+{% highlight css %}
 .some {
   font-family: fantasy;
   font-size: 30em;
   font-weight: bold;
 }
-```
+{% endhighlight %}
 
 用sass可以这样写：
 
-```sass
+{% highlight css %}
 .some {
   font {
     family: fantasy;
@@ -214,26 +214,26 @@ div {
     weight: bold;
   }
 }
-```
+{% endhighlight %}
 
 名字空间也可以是已经赋了值的：
 
-```sass
+{% highlight css %}
 .some {
   font: fantasy, 30em {
     weight: bold;
   }
 }
-```
+{% endhighlight %}
 
 上面的形式编译成css是这样的（保留已赋值部分，块里面的属性则每条单独用font-xxx的方式添加）：
 
-```css
+{% highlight css %}
 .some {
   font: fantasy, 30em;
   font-weight: bold;
 }
-```
+{% endhighlight %}
 
 #### @midia嵌套
 
@@ -252,7 +252,7 @@ sass和less都包含选择器继承，但是用法上稍有区别；less使用``
 
 仅用于继承的选择器，不作为css输出（less中有仅用于继承的mixin）：
 
-```sass
+{% highlight css %}
 .some-ct %some-class {
   color: red;
 }
@@ -260,16 +260,16 @@ sass和less都包含选择器继承，但是用法上稍有区别；less使用``
 .mine {
   @extend %some-class;
 }
-```
+{% endhighlight %}
 
 编译成css为：
 
-```css
+{% highlight css %}
 .some-ct .mine {
   color: red;
 }
 
-```
+{% endhighlight %}
 
 #### less和sass在继承内嵌选择器上的区别
 
@@ -277,7 +277,7 @@ less可以继承复杂选择器，而sass的继承对象不能是复杂选择器
 
 less在继承上的匹配是精确匹配，继承的时候必须指定继承的内嵌选择器的名字空间（父选择器）；而sass在匹配上则是尽量满足更多的可匹配选择器，包括自动去内嵌选择器中去寻找可能的匹配，比如：
 
-```sass
+{% highlight css %}
 .some-ct .some-class {
   color: red;
 }
@@ -285,19 +285,19 @@ less在继承上的匹配是精确匹配，继承的时候必须指定继承的�
 .mine {
   @extend .some-class;
 }
-```
+{% endhighlight %}
 
 编译为：
 
-```css
+{% highlight css %}
 .some-ct .some-class, .some-ct .mine {
   color: red;
 }
-```
+{% endhighlight %}
 
 自动匹配了内嵌的``.some-class``，并做了替代。注意这里``@extend .some-class``如果放在less里（``:extend(.some-class)``）是匹配不到``.some-ct .some-class``的，只有``:extend(.some-ct .some-class)``才可以匹配到。而在sass里只能采取这种方式（``@extend .some-class;``而不是``@extend .some-ct .some-class``），原因是sass里不能继承``.a .b``或``.a + .b``这种带层级的选择器，因此如果用``@extend .some-ct .some-class``就会报错。
 
-```sass
+{% highlight css %}
 .some-ct .some-class {
   color: red;
 }
@@ -305,65 +305,65 @@ less在继承上的匹配是精确匹配，继承的时候必须指定继承的�
 .mine {
   @extend .some-ct .some-class;
 }
-```
+{% endhighlight %}
 
 上面的代码会直接报错：``can't extend nested selectors``
 
 另外，当继承目标选择器的时候，自身是在一个内嵌选择器序列中，则如果继承目标也是在内嵌序列中，则会发生**合并序列**，如下：
 
-```sass
+{% highlight css %}
 #admin .tabbar a {
   font-weight: bold;
 }
 #demo .overview .fakelink {
   @extend a;
 }
-```
+{% endhighlight %}
 
 编译后：
 
-```css
+{% highlight css %}
 #admin .tabbar a,
 #admin .tabbar #demo .overview .fakelink,
 #demo .overview #admin .tabbar .fakelink {
   font-weight: bold; }
-```
+{% endhighlight %}
 
 如果两者序列中包含重合的部分，则会合并重合的部分：
 
-```sass
+{% highlight css %}
 #admin .tabbar a {
   font-weight: bold;
 }
 #admin .overview .fakelink {
   @extend a;
 }
-```
+{% endhighlight %}
 
 编译后：
 
-```css
+{% highlight css %}
 #admin .tabbar a,
 #admin .tabbar .overview .fakelink,
 #admin .overview .tabbar .fakelink {
   font-weight: bold; }
-```
+{% endhighlight %}
 
 #### 多重继承
 
-```sass
+{% highlight css %}
 @extend .a;
 @extend .b;
 
 // or
 @extend .a, .b;
-```
+{% endhighlight %}
 
 #### !optional
 
 继承出错时可以避免报错：如当一个a元素去继承一个h1.xxx的元素，这时会因为a和h1冲突无法继承而报错；加上``!optional;``可以避免报错。
 
-```sass
+{% highlight css %}
 #context h1.notice {
   color: blue;
   font-weight: bold;
@@ -372,7 +372,7 @@ less在继承上的匹配是精确匹配，继承的时候必须指定继承的�
 a.important {
   @extend .notice !optional;
 }
-```
+{% endhighlight %}
 
 #### 在media内部使用继承
 
@@ -404,7 +404,7 @@ less中只要是简单类选择器或者id选择器就可以拿来作为mixin在
 
 向mixin传递的参数为独立规则集时，less和sass有点区别，less是当做一个参数传递的，在定义mixin时需要声明一个形参，并在mixin内部调动该形参即可，比如：
 
-```less
+{% highlight css %}
 .desktop-and-old-ie(@rules) {
   @media screen and (min-width: 1200) { @rules(); }
   html.lt-ie9 &                       { @rules(); }
@@ -418,11 +418,11 @@ header {
   background-color: red;
   });
 }
-```
+{% endhighlight %}
 
 而同样的.desktop-and-old-ie(@rules)的在sass里是这样声明的：
 
-```sass
+{% highlight css %}
 @mixin desktop-and-old-ie {
   // 使用@content调用独立规则集
   @media screen and (min-width: 1200) { @content; }
@@ -438,11 +438,11 @@ header {
   background-color: red;
   };
 }
-```
+{% endhighlight %}
 
 注意传递独立规则集给mixin的时候，该独立规则集（这里是延用less的名词，在sass里这个叫做**block content**）内部的变量和mixin的作用域是定义该独立规则集的外围作用域，例如：
 
-```sass
+{% highlight css %}
 $color: white;
 @mixin colors($color: blue) {
   background-color: $color;
@@ -452,17 +452,17 @@ $color: white;
 .colors {
   @include colors { color: $color; }
 }
-```
+{% endhighlight %}
 
 这里``@include colors { color: $color; }``的$color不会去找mixin内部的``$color:blue``而是找独立规则集外围的作用域``$color:white``，因此编译出来的css如下：
 
-```css
+{% highlight css %}
 .colors {
   background-color: blue;
   color: white;
   border-color: blue;
 }
-```
+{% endhighlight %}
 
 ## 函数
 
@@ -475,17 +475,17 @@ $color: white;
 
 less和sass中都提供了各种预置函数，比如``lighten()``，``darken()``等，调用的方法也是一样的，直接调用就可以了，比如：
 
-```sass
+{% highlight css %}
 div {
   color: lighten(#000, 10%);
 }
-```
+{% endhighlight %}
 
 #### 自定义函数
 
 less使用mixin达到和函数类似的效果，而sass使用``@function``关键字来定义自定义函数：
 
-```sass
+{% highlight css %}
 @function sum($a, $b) {
   @return $a + $b;
 }
@@ -495,13 +495,13 @@ less使用mixin达到和函数类似的效果，而sass使用``@function``关键
   $b: 20px;
   width: sum($a, $b);
 }
-```
+{% endhighlight %}
 
 注意``@function``中使用``@return``返回结果
 
 上面的例子在less中可以这样实现：
 
-```less
+{% highlight css %}
 .sum(@a, @b) {
   @sum: @a + @b;
 }
@@ -512,7 +512,7 @@ less使用mixin达到和函数类似的效果，而sass使用``@function``关键
   .sum(@a, @b);
   width: @sum;
 }
-```
+{% endhighlight %}
 
 建议：在定义函数时为了方便与变量或者mixin区别开来（避免名字冲突），可以给函数加前缀，比如你是3dobe公司的，定义sum函数，可以使用``-3dobe-sum``作为函数名
 
@@ -533,21 +533,21 @@ less使用mixin达到和函数类似的效果，而sass使用``@function``关键
 
 这四种形式分别如下所示：
 
-```sass
+{% highlight css %}
 @import "foo.css";
 @import "http://foo.com/bar";
 @import url(foo);
 @import "foo" screen;
-```
+{% endhighlight %}
 
 编译后：
 
-```css
+{% highlight css %}
 @import url(foo.css);
 @import "http://foo.com/bar";
 @import url(foo);
 @import "foo" screen;
-```
+{% endhighlight %}
 
 ## 条件语句
 
@@ -558,7 +558,7 @@ less使用mixin达到和函数类似的效果，而sass使用``@function``关键
 
 less使用guards进行条件判断（包括mixin guards和css guards），sass使用``@if``、``@else``语句进行判断：
 
-```sass
+{% highlight css %}
 $test: true;
 
 div {
@@ -568,7 +568,7 @@ div {
     color: red;
   } 
 }
-```
+{% endhighlight %}
 
 **等于**符号和less的差别：less是``=``，而sass是``==``
 
@@ -583,13 +583,13 @@ less里的循环是使用when判断条件，在mixin里先更新条件然后继�
 
 #### @for指令
 
-```sass
+{% highlight css %}
 @for $i from 1 through 10 {
   .class-#{$i} {
     background-color: darken(#eee, 10% * $i);
   }
 }
-```
+{% endhighlight %}
 
 @for循环有两种格式：
 
@@ -600,7 +600,7 @@ less里的循环是使用when判断条件，在mixin里先更新条件然后继�
 
 #### @while指令
 
-```sass
+{% highlight css %}
 $i: 0;
 @while $i < 10 {
   $i: $i + 1;
@@ -608,17 +608,17 @@ $i: 0;
     background-color: darken(#fff, 10% * $i);
   }
 }
-```
+{% endhighlight %}
 
 #### @each指令
 
-```sass
+{% highlight css %}
 @each $i in 1,2,3,4,5,6,7,8,9,10 {
   .class-#{$i} {
     background-color: darken(#fff, 10% * $i);
   }
 }
-```
+{% endhighlight %}
 
 语法：``@each $var in <list or map> { ... }``
 
@@ -630,7 +630,7 @@ list可以使用list functions做处理
 
 来个多值列表的例子：
 
-```sass
+{% highlight css %}
 @each $animal, $color, $cursor in (puma, black, default),
                 (sea-slug, blue, pointer),
                 (egret, white, move) {
@@ -640,11 +640,11 @@ list可以使用list functions做处理
     cursor: $cursor;
   }
 }
-```
+{% endhighlight %}
 
 编译出来的css如下：
 
-```css
+{% highlight css %}
 .puma-icon {
   background-image: url("/images/puma.png");
   border: 2px solid black;
@@ -662,19 +662,19 @@ list可以使用list functions做处理
   border: 2px solid white;
   cursor: move;
 }
-```
+{% endhighlight %}
 
 * map：``(key1: val1, key2: val2, key3, val3)``；map可以用map functions，也可以当做``(key1 val1, key2 val2, key3 val3)``的list，调用list function
 
 比如：
 
-```sass
+{% highlight css %}
 @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
   #{$header} {
     font-size: $size;
   }
 }
-```
+{% endhighlight %}
 
 ## 其他指令
 
