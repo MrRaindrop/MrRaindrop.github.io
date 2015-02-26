@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sass/Less语法简单对比"
+title:  "SASS/LESS语法简明对比"
 date:   2015-02-26 14:36:00
 categories: css
 tags: [css, sass, scss, less, 样式表, css预处理, fe, 前端, front-end, 前端开发]
