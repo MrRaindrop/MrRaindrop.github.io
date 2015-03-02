@@ -91,10 +91,7 @@ scss全称是sassy css，写起来跟更接近css，除此之外它和sass没有
 
 ## 变量
 
-| 语言     | 声明   |  作为数值  | 作为字符串 |  字符串引号  |
-| -------- | ------  | ---------- | ----------  | ------------- |
-| less     |  @var   |    @var    |   @{var}    | 引号保持不变 |
-| sass     |   $var  |   $var     |  #{$var}    | 自动去引号   |
+![变量](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-bianliang.png)
 
 变量定义：``$my-color: #fff;`` （less用@定义和调用变量）
 
@@ -171,10 +168,7 @@ div {
 
 ## 父元素和嵌套
 
-| 语言     |        &的位置         |   合并值（如font） |
-| -------- | ------------------------------------------- | --------------------------------------------- |
-| less | 可以出现在名字的任意位置，如``my-&`` | \-\-\-\- |
-| sass | 只能出现在名字的开头，如``&-mine``，但是前面可以出现其他选择器，如``.xx &-mine`` | 使用名字空间处理，即``font-weight``拆成``font { weight: xxx; }`` |
+![父元素和嵌套](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-fuyuansu.png)
 
 #### 父选择符&
 
@@ -241,10 +235,7 @@ div {
 
 ## 继承
 
-| 语言     |         语法         |  仅用于继承的选择器 |  继承内嵌选择器 |
-| -------- | -------------------- | --------------------- | ------------------------------------- |
-| less     |  :extend(.parent);   | 只有仅用于混入的mixin，没有仅用于继承的选择器 | :extend(.parent .child); |
-| sass     |  @extend:  .parent;  | 使用place holder selectors （%xxx） | @extend .child; |
+![继承](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-jicheng.png)
 
 sass和less都包含选择器继承，但是用法上稍有区别；less使用``:extend()``伪类作为继承方式，而sass中使用``@extend xxx;``语句
 
@@ -391,10 +382,7 @@ a.important {
 
 ## mixin
 
-| 语言     |         声明         |        调用       | 独立规则集作参数 |
-| -------- | -------------------- | ------------------ | ------------------ |
-| less     | 不需要单独声明，类选择器和id选择器可以作为mixin | .mixin(); 或 .mixin; | 作为变量参数 |
-| sass     | @mixin xxx { ... }  |   @include xxx;    | 在@content处作替换 |
+![mixin](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-mixin.png)
 
 less中只要是简单类选择器或者id选择器就可以拿来作为mixin在别的地方调用，调用方式也是简单的``mixin();``，而sass中使用了两个关键字，``@mixin``和``@include``，其中``@mixin``用于声明一个mixin，而``@include``用于调用一个mixin
 
@@ -466,10 +454,7 @@ $color: white;
 
 ## 函数
 
-| 语言     |         自定义函数         |
-| -------- | -------------------- |
-| less     | 无此功能，可使用mixin间接实现类似函数功能 |
-| sass     | @function关键字 |
+![函数](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-function.png)
 
 #### 预置函数
 
@@ -551,10 +536,7 @@ less使用mixin达到和函数类似的效果，而sass使用``@function``关键
 
 ## 条件语句
 
-| 语言     |         条件判断         |  等于判断    |
-| -------- | -------------------- | ----------------- |
-| less     | 使用 when 关键字，如.class when( ... ) { ... } | 使用``=`` |
-| sass     | 使用 @if 和 @else 关键字  | 使用``==`` |
+![条件语句](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-condition.png)
 
 less使用guards进行条件判断（包括mixin guards和css guards），sass使用``@if``、``@else``语句进行判断：
 
@@ -574,10 +556,7 @@ div {
 
 ## 循环
 
-| 语言     |         循环实现         |
-| -------- | ------------------------- |
-| less     | 使用 when 关键字并调用自身（mixin调用） |
-| sass     | 使用 @for、@while、@each 关键字 |
+![循环](http://7u2loa.com1.z0.glb.clouddn.com/lessnsass-loop.png)
 
 less里的循环是使用when判断条件，在mixin里先更新条件然后继续调用自身来实现的，类似一般编程语言中的while结构；而sass里实现循环则使用@for、@while或者@each关键字：
 
